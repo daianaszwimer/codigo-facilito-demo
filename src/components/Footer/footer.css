@@ -1,0 +1,5 @@
+footer {
+  border-top: 1px solid var(--menu-border-color);
+  padding: 10px;
+  text-align: center;
+}
