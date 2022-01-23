@@ -1,7 +1,9 @@
 import {useEffect, useState} from "react";
-
+import "./episodios.css"
+import { ReactComponent as Loading } from "../../assets/loading.svg";
 function Episodios() {
-  const [episode, setEpisode] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
+  const [episode, setEpisode] = useState(null)
   const [shouldRefresh, setShouldRefresh] = useState(true)
   useEffect(function getQuotes () {
     if (!shouldRefresh) {
@@ -12,20 +14,28 @@ function Episodios() {
       .then(data => {
         setEpisode(data.data)
         setShouldRefresh(false)
+        setIsLoading(false)
       });
   }, [shouldRefresh])
 
   function refresh() {
     setShouldRefresh(true)
+    setIsLoading(true)
   }
-  return <div>
+  if (isLoading) {
+    return <div className="loading-wrapper">
+      <Loading/>
+      <span>Loading</span>
+    </div>
+  }
+  return <>
+    <button onClick={refresh} className="refresh-button">
+      Refresh
+    </button>
     <h1>
       {episode.title} - {episode.description}
     </h1>
-    <button onClick={refresh}>
-      Refresh
-    </button>
-  </div>
+  </>
 }
 
 export default Episodios

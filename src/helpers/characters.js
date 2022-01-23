@@ -133,7 +133,7 @@ const IMAGES = {
   "5e93b5bb3af44260882e33c8": {
     "firstname": "Ed",
     "lastname": "Truck",
-    url: "https://static.wikia.nocookie.net/theoffice/images/f/f9/Edtruck.png/revision/latest?cb=20190524125617"
+    url: "https://cinematicos.net/wp-content/uploads/%C2%BFQue-paso-realmente-con-el-gerente-de-Dunder-Mifflin-Ed.jpg"
   },
   "5e93b5c53af44260882e33c9": {
     "firstname": "Hunter",

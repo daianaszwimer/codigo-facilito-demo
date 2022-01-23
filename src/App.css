@@ -1,16 +1,24 @@
 :root {
-  --menu-border-color: black;
-  --background-color: white;
+  --menu-border-color: #4895EF;
+  --background-color: #ffffeb;
   --text-color: black;
   --active: #d62828;
+  --menu-text-color: #F72585;
+  --menu-text-hover-color: #4CC9F0;
+  --button-background-color: #ff80ba;
+  --button-background-color-hover: #8dafff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --menu-border-color: white;
-    --background-color: black;
+    --menu-border-color: #ebb2ff;
+    --background-color: #051739;
     --text-color: white;
     --active: #f77f00;
+    --menu-text-color: #ff6cf3;
+    --menu-text-hover-color: #83d0ff;
+    --button-background-color: #427bfe;
+    --button-background-color-hover: #C865F9FF;
   }
 }
 a, a:visited {
@@ -28,9 +36,10 @@ body, html, #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
+  font-family: 'Inter', sans-serif;
 }
 
 main {
   flex: 1;
+  padding: 14px;
 }

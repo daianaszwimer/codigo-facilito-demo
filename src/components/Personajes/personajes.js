@@ -10,8 +10,8 @@ function Personajes() {
   }, [])
   const name = formatName(character)
   return <>
-    <h1>{name}</h1>
     <CharacterImage id={character?._id} name={name}/>
+    <h1>{name}</h1>
   </>
 }
 
